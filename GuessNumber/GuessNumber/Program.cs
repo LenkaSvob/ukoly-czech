@@ -11,7 +11,11 @@
             {
                 bool isNum = int.TryParse(Console.ReadLine(), out int guess);
 
-                if (myNum < guess)
+                if (isNum == false)
+                {
+                    Console.WriteLine("Not a number. Please enter a number.");
+                }
+                else if (myNum < guess)
                 {
                     Console.WriteLine("My number is smaller, guess again:");
                 }
@@ -24,10 +28,7 @@
                     Console.WriteLine("That's the right number!");
                     break;
                 }
-                else if (isNum == false)
-                {
-                    Console.WriteLine("My number is bigger, guess again:");
-                }
+                
             }
 
             Console.ReadLine();
